@@ -30,10 +30,10 @@ const loggingOut = () => {
                     </router-link>
                     <div v-else class="flex">
                     <router-link to="/secret">
-                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Secret</li>
+                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">Secret</li>
                     </router-link>
                     <button @click="logout">
-                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">loggingOut</li>
+                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">loggingOut</li>
                     </button>
                     </div>
 

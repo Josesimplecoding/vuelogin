@@ -13,20 +13,20 @@ const loggingOut = () => {
 </script>
 
 <template>
-    <div class="text-indigo-200 bg-indigo-900">
+    <div class="text-yellow-200 bg-yellow-900">
         <div class="container flex items-center justify-between mx-auto">
             <h1 class="text-3xl font-thin tracking-tighter">
-                Vue<span class="font-normal">FakeAuth</span></h1>
+                Vue<span class="font-normal">RealAuth</span></h1>
             <nav>
                 <ul class="flex space-x-4">
                     <router-link to="/">
-                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800"> Home </li>
+                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800"> Home </li>
                     </router-link>
                     <router-link to="/about">
-                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">About</li>
+                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">About</li>
                     </router-link>
                     <router-link v-if="!isAuthenticated" to="/login">
-                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-indigo-500 hover:text-indigo-800">Login</li>
+                        <li class="px-4 py-8 hover:cursor-pointer hover:bg-yellow-500 hover:text-yellow-800">Login</li>
                     </router-link>
                     <div v-else class="flex">
                     <router-link to="/secret">

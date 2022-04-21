@@ -4,6 +4,8 @@
 
     const { messages, unsubscribe } = useChat()
 
+    const newMessage = ref('')
+
     onUnmounted(() => {
         unsubscribe()
     })
@@ -20,7 +22,7 @@
             </li>
         </ul>
         <div>
-            <input class="w-full p-4 rounded-lg focus:outline-none focus:bg-yellow-200" type="text" placeholder="Type a message ..." />
+            <input class="w-full p-4 rounded-lg focus:outline-none focus:bg-yellow-200" type="text" placeholder="Type a message ..." v-model="newMessage"/>
         </div>
     </div>
 </template>

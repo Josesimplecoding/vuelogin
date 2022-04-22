@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { collection, query, orderBy, onSnapshot, QuerySnapshot, addDoc } from 'firebase/firestore'
+import { collection, query, orderBy, onSnapshot, addDoc } from 'firebase/firestore'
 
 import { db } from './useFirebase'
 import useAuth from './useAuth'
@@ -13,7 +13,7 @@ const useChat = () => {
     
     const chatQuery = query(chatCollection, orderBy('createdAt', 'desc'))
 
-    const unsubscribe = onSnapshot(chatQuery, (querySnapshot) => {
+    const unsubscribe = onSnapshot(chatQuery, querySnapshot => {
         messages.value = []
         querySnapshot.forEach(doc => {
             messages.value.push({ id: doc.id, ...doc.data() })

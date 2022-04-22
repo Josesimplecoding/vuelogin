@@ -1,9 +1,10 @@
 <script setup>
-    import { onUnmounted } from 'vue';
-    import useChat from '../composable/useChat';
+    import { onUnmounted, ref } from 'vue'
+    import useChat from '../composable/useChat'
     import useAuth from '../composable/useAuth'
 
     const { messages, unsubscribe, sendMessage } = useChat()
+    const { user } = useAuth()
 
     const newMessage = ref('')
 
